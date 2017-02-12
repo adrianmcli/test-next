@@ -1,8 +1,11 @@
 import React from 'react'
-import ReduxProvider from '../modules/redux/ReduxProvider'
-import Page from '../modules/clock/Page'
+import Link from 'next/link'
 
 export default () =>
-  <ReduxProvider>
-    <Page title='Index Page' linkTo='/other' />
-  </ReduxProvider>
+  <div>
+    <h1>Welcome to the Home page</h1>
+    <ul>
+      <li><Link href="/clock"><a>Clock</a></Link></li>
+      <li><Link href="/counter"><a>Counter</a></Link></li>
+    </ul>
+  </div>

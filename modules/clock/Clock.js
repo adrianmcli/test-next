@@ -1,7 +1,8 @@
-export default ({ lastUpdate, light }) => {
+export default (props) => {
+  console.log(props)
   return (
-    <div className={light ? 'light' : ''}>
-      {format(new Date(lastUpdate))}
+    <div className={props.light ? 'light' : ''}>
+      {format(new Date(props.lastUpdate))}
       <style jsx>{`
         div {
           padding: 15px;

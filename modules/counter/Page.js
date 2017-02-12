@@ -7,7 +7,7 @@ const Component = ({ title, linkTo }) =>
     <h1>{title}</h1>
     <Counter />
     <nav>
-      <Link href={linkTo}><a>Navigate</a></Link>
+      <Link href="/"><a>Home</a></Link>
     </nav>
   </div>
 

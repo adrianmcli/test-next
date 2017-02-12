@@ -1,10 +1,9 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import combinedReducers from './combinedReducers'
 
-import clockReducer from './clock-reducer'
-
-export const reducer = clockReducer
+export const reducers = combinedReducers
 
 let store = null
 
