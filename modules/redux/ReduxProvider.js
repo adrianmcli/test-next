@@ -1,7 +1,8 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 
-import { reducer, initStore, startClock } from '../redux'
+import { startClock } from '../clock'
+import { reducer, initStore } from '../redux'
 
 export default class Counter extends React.Component {
   static getInitialProps ({ req }) {

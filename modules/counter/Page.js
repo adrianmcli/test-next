@@ -1,14 +1,13 @@
 import Link from 'next/link'
 import { connect } from 'react-redux'
-import Clock from './Clock'
+import Counter from './Counter'
 
-const Component = ({ title, linkTo, lastUpdate, light }) =>
+const Component = ({ title, linkTo }) =>
   <div>
     <h1>{title}</h1>
-    <Clock lastUpdate={lastUpdate} light={light} />
+    <Counter />
     <nav>
       <Link href={linkTo}><a>Navigate</a></Link>
-      <Link href="/counter"><a>Counter</a></Link>
     </nav>
   </div>
 

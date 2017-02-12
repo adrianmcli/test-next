@@ -2,16 +2,9 @@ import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-export const reducer = (state = { lastUpdate: 0, light: false }, action) => {
-  switch (action.type) {
-    case 'TICK': return { lastUpdate: action.ts, light: !!action.light }
-    default: return state
-  }
-}
+import clockReducer from './clock-reducer'
 
-export const startClock = () => dispatch => {
-  return setInterval(() => dispatch({ type: 'TICK', light: true, ts: Date.now() }), 800)
-}
+export const reducer = clockReducer
 
 let store = null
 
