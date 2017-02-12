@@ -1,5 +1,4 @@
 export default (props) => {
-  console.log(props)
   return (
     <div className={props.light ? 'light' : ''}>
       {format(new Date(props.lastUpdate))}

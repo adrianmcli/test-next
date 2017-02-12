@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { startClock } from '../clock'
 import { reducers, initStore } from '../redux'
 
-export default class Counter extends React.Component {
+export default class Component extends React.Component {
   static getInitialProps ({ req }) {
     const isServer = !!req
     const store = initStore(reducers, null, isServer)
@@ -15,14 +15,6 @@ export default class Counter extends React.Component {
   constructor (props) {
     super(props)
     this.store = initStore(reducers, props.initialState, props.isServer)
-  }
-
-  componentDidMount () {
-    this.timer = this.store.dispatch(startClock())
-  }
-
-  componentWillUnmount () {
-    clearInterval(this.timer)
   }
 
   render () {
