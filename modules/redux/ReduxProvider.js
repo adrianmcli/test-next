@@ -7,7 +7,7 @@ import { reducers, initStore } from '../redux'
 export default class Component extends React.Component {
   static getInitialProps ({ req }) {
     const isServer = !!req
-    const store = initStore(reducers, null, isServer)
+    const store = initStore(reducers, {}, isServer)
     store.dispatch({ type: 'TICK', light: !isServer, ts: Date.now() })
     return { initialState: store.getState(), isServer }
   }
