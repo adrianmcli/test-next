@@ -24,10 +24,6 @@ class Component extends React.Component {
       <div>
         <h1>{title}</h1>
         <Clock lastUpdate={lastUpdate} light={light} />
-        <ul>
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li><Link href="/counter"><a>Counter</a></Link></li>
-        </ul>
       </div>
     )
   }

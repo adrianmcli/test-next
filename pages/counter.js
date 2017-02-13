@@ -1,5 +1,5 @@
-import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import ReduxProvider from '../modules/redux/ReduxProvider'
 import CounterPage from '../modules/counter/Page'
 
@@ -11,4 +11,8 @@ export default () =>
     <ReduxProvider>
       <CounterPage />
     </ReduxProvider>
+    <ul>
+      <li><Link href="/"><a>Home</a></Link></li>
+      <li><Link href="/clock"><a>Clock</a></Link></li>
+    </ul>
   </div>

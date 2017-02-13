@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import { Provider } from 'react-redux'
 import { reducers, initStore } from '../modules/redux'
@@ -28,6 +29,10 @@ export default class Component extends React.Component {
         <Provider store={this.store}>
           <ClockPage />
         </Provider>
+        <ul>
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li><Link href="/clock"><a>Clock</a></Link></li>
+        </ul>
     </div>
     )
   }
